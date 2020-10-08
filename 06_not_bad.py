@@ -11,7 +11,17 @@ Exemplo: 'The dinner is not that bad!' retorna 'The dinner is good!'
 
 def not_bad(s):
     # +++ SUA SOLUÇÃO +++
-    return
+
+    # bom = 'good'
+    nao = s.find('not')
+    ruim = s.find('bad')
+    if nao < ruim:
+        remove = s[nao:-1]
+        res = remove
+    else:
+        res = s
+
+    return res
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
