@@ -18,6 +18,8 @@ def both_ends(s):
         result = begin + end
     return result
 
+    #resposta em uma linha sugerida pelo aluno Ramiro V. S. Junior
+    # return s[:2] + s[-2:] if len(s) > 2 else ''
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
