@@ -11,16 +11,12 @@ Exemplo: 'The dinner is not that bad!' retorna 'The dinner is good!'
 
 def not_bad(s):
     # +++ SUA SOLUÇÃO +++
-
-    # bom = 'good'
     nao = s.find('not')
     ruim = s.find('bad')
     if nao < ruim:
-        remove = s[nao:-1]
-        res = remove
+        res = s[:nao] + 'good'
     else:
         res = s
-
     return res
 
 
@@ -48,4 +44,4 @@ if __name__ == '__main__':
     test(not_bad, 'This movie is not so bad', 'This movie is good')
     test(not_bad, 'This dinner is not that bad!', 'This dinner is good!')
     test(not_bad, 'This tea is not hot', 'This tea is not hot')
-    test(not_bad, "It's bad yet not", "It's bad yet not")
+    test(not_bad, "It'a bad yet not", "It'a bad yet not")
