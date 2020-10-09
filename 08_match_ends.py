@@ -1,7 +1,7 @@
 """
 08. match_ends
 
-Dada uma lista de strings, retorne a contagem do número de
+Dada uma lista de strings, retorne a itens_iguais do número de
 strings onde o comprimento da cadeia é 2 ou mais e o primeiro
 e o último caracteres da cadeia são os mesmos.
 
@@ -10,7 +10,18 @@ PS: Python não possui o operador ++, porém += funciona.
 
 def match_ends(words):
     # +++ SUA SOLUÇÃO +++
-    return
+    i = 0
+    itens_iguais = []
+
+    while i < len(words):
+        a = words[i]
+        if len(a) >= 2 and a[0] == a[-1]:
+            itens_iguais.append(a)
+        else:
+            pass
+        i += 1
+
+    return len(itens_iguais)
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
@@ -37,3 +48,5 @@ if __name__ == '__main__':
     test(match_ends, ['aba', 'xyz', 'aa', 'x', 'bbb'], 3)
     test(match_ends, ['', 'x', 'xy', 'xyx', 'xx'], 2)
     test(match_ends, ['aaa', 'be', 'abc', 'hello'], 1)
+    test(match_ends, ['aac', 'beergxb', 'a', 'helloh'], 2)
+    test(match_ends, ['aaasdcfasdf', 'asdfasdfe', 'abcasdfasdfa', 'hello'], 1)
