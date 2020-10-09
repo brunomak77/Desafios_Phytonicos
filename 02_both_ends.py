@@ -1,7 +1,7 @@
 """
 02. both_ends
 
-Dada uma string s, retorne uma string feita com os dois primeiros
+Dada uma string a, retorne uma string feita com os dois primeiros
 e os dois ultimos caracteres da string original.
 Exemplo: 'spring' retorna 'spng'. Entretanto, se o tamanho da string
 for menor que 2, retorne uma string vazia.
@@ -19,7 +19,7 @@ def both_ends(s):
     return result
 
     #resposta em uma linha sugerida pelo aluno Ramiro V. S. Junior
-    # return s[:2] + s[-2:] if len(s) > 2 else ''
+    # return a[:2] + a[-2:] if len(a) > 2 else ''
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
