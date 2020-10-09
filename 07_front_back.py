@@ -12,8 +12,28 @@ a-frente + b-frente + a-trás + b-trás
 """
 def front_back(a, b):
     # +++ SUA SOLUÇÃO +++
-    return
 
+    moda = len(a) % 2
+    sizea = len(a) / 2
+
+    modb = len(b) % 2
+    sizeb = len(b) / 2
+
+    if moda != 0:
+        inia = int(sizea+1)
+        fima = int(sizea+1)
+    else:
+        inia, fima = int(sizea), int(sizea)
+
+    if modb != 0:
+        inib = int(sizeb+1)
+        fimb = int(sizeb+1)
+    else:
+        inib, fimb = int(sizeb), int(sizeb)
+
+    c = a[:inia] + b[:inib] + a[fima:] + b[fimb:]
+
+    return c
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 
