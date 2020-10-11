@@ -40,16 +40,34 @@
 
 #### ex 08
 
-words = ['aba', 'xyz', 'aa', 'x', 'bbb']
-i = 0
-itens_iguais = []
+# words = ['aba', 'xyz', 'aa', 'x', 'bbb']
+# i = 0
+# itens_iguais = []
+#
+# while i < len(words):
+#     a = words[i]
+#     if len(a) >= 2 and a[0] == a[-1]:
+#         itens_iguais.append(a)
+#     else:
+#         pass
+#     i += 1
+#
+# print(len(itens_iguais))
 
+##################################################################
+
+#### ex 09
+
+words = ['mix', 'xyz', 'apple', 'xanadu', 'aardvark']
+i = 0
+x_list = []
+all_list = []
 while i < len(words):
-    a = words[i]
-    if len(a) >= 2 and a[0] == a[-1]:
-        itens_iguais.append(a)
+    if words[i][0] == 'x':
+        x_list.append(words[i])
     else:
-        pass
+        all_list.append(words[i])
     i += 1
 
-print(len(itens_iguais))
+final_list = (sorted(x_list)+sorted(all_list))
+print(final_list)
