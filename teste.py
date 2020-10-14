@@ -1,40 +1,22 @@
 #### ex 06
-# a = 'abcde'
-# b = 'xyz'
+
+# import re
+# s = 'This tea is not hot'
 #
-# # print(len(a))
-# # print(len(b))
+# nao = re.search('not', s)
+# ruim = re.search('bad', s)
 #
-# moda = len(a) % 2
-# sizea = len(a) / 2
-# modb = len(b) % 2
-# sizeb = len(b) / 2
-#
-# if moda != 0:
-#     inia = int(sizea+1)
-#     fima = int(sizea)
+# if ruim:
+#     nao = nao.span()[0]+3
+#     ruim = ruim.span()[1]
+#     if nao < ruim:
+#         removing = s[0:nao] + s[ruim::]
+#         new_text = removing.replace('not', 'good')
+#         print(new_text)
+#     else:
+#         print(s)
 # else:
-#     inia, fima = int(sizea), int(sizea)
-#
-# if modb != 0:
-#     inib = int(sizeb+1)
-#     fimb = int(sizeb)
-# else:
-#     inib, fimb = int(sizeb), int(sizeb)
-#
-# firsta = a[:inia]
-# lasta = a[fima:]
-# firstb = b[:inib]
-# lastb =  b[fimb:]
-#
-# print(firsta)
-# print(firstb)
-# print(lasta)
-# print(lastb)
-#
-# c = firsta+firstb+lasta+lastb
-#
-# print(c)
+#     print(s)
 
 ##################################################################
 
@@ -58,16 +40,41 @@
 
 #### ex 09
 
-words = ['mix', 'xyz', 'apple', 'xanadu', 'aardvark']
-i = 0
-x_list = []
-all_list = []
-while i < len(words):
-    if words[i][0] == 'x':
-        x_list.append(words[i])
-    else:
-        all_list.append(words[i])
-    i += 1
+# words = ['mix', 'xyz', 'apple', 'xanadu', 'aardvark']
+# i = 0
+# x_list = []
+# all_list = []
+# while i < len(words):
+#     if words[i][0] == 'x':
+#         x_list.append(words[i])
+#     else:
+#         all_list.append(words[i])
+#     i += 1
+#
+# final_list = (sorted(x_list)+sorted(all_list))
+# print(final_list)
 
-final_list = (sorted(x_list)+sorted(all_list))
-print(final_list)
+
+##################################################################
+
+#### ex 10
+
+# tuples = [(1, 7), (1, 3), (3, 4, 5), (2, 2)]
+#
+# good_list = [(0,0)]
+# i = 0
+#
+# # highest_number = 0
+# while i <= len(tuples)-1:
+#
+#
+#     if tuples[i][-1] < highest_number:
+#         # highest_number = tuples[i][-1]
+#         good_list.append(tuples[i])
+#     else:
+#         # print('R')
+#         good_list.append(tuples[i-1])
+#     i += 1
+#
+# good_list.pop(0)
+# print(good_list)
