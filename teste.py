@@ -59,22 +59,9 @@
 
 #### ex 10
 
-# tuples = [(1, 7), (1, 3), (3, 4, 5), (2, 2)]
-#
-# good_list = [(0,0)]
-# i = 0
-#
-# # highest_number = 0
-# while i <= len(tuples)-1:
-#
-#
-#     if tuples[i][-1] < highest_number:
-#         # highest_number = tuples[i][-1]
-#         good_list.append(tuples[i])
-#     else:
-#         # print('R')
-#         good_list.append(tuples[i-1])
-#     i += 1
-#
-# good_list.pop(0)
-# print(good_list)
+tuples = [(1, 7), (1, 3), (3, 4, 5), (2, 2)]
+
+good_list = sorted(tuples, key=lambda x: x[-1])
+
+
+print(good_list)
