@@ -59,9 +59,21 @@
 
 #### ex 10
 
-tuples = [(1, 7), (1, 3), (3, 4, 5), (2, 2)]
+# tuples = [(1, 7), (1, 3), (3, 4, 5), (2, 2)]
+#
+# good_list = sorted(tuples, key=lambda x: x[-1])
+#
+#
+# print(good_list)
 
-good_list = sorted(tuples, key=lambda x: x[-1])
+##################################################################
+
+#### ex 11
 
 
-print(good_list)
+nums = [1, 2, 2, 3]
+
+nums_drop = set(nums)
+new_nums = list(nums_drop)
+
+print(new_nums)
