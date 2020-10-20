@@ -71,9 +71,28 @@
 #### ex 11
 
 
-nums = [1, 2, 2, 3]
+# nums = [2, 2, 3, 3, 3, 2, 2]
+#
+# # nums_drop = set(nums)
+# # new_nums = list(nums_drop)
+#
+#
+# new_nums = []
+# last_pos = ''
+#
+# for i in nums:
+#     if i != last_pos:
+#         new_nums.append(i)
+#         last_pos = i
+#
+#
+# print(new_nums)
 
-nums_drop = set(nums)
-new_nums = list(nums_drop)
+##################################################################
 
-print(new_nums)
+#### ex 12
+
+
+nums = [2, 2, 3, 3, 3, 2, 2]
+
+print(0 2)
