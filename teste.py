@@ -93,6 +93,10 @@
 #### ex 12
 
 
-nums = [2, 2, 3, 3, 3, 2, 2]
+from heapq import merge
 
-print(0 2)
+list1 = [1,2,3,4,5]
+list2 = [4,5,6,7,8]
+
+print(list(merge(list1, list2)))
+
