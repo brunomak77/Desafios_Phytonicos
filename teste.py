@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 #### ex 06
 
 # import re
@@ -22,12 +25,12 @@
 
 #### ex 08
 
-# words = ['aba', 'xyz', 'aa', 'x', 'bbb']
+# palavras = ['aba', 'xyz', 'aa', 'x', 'bbb']
 # i = 0
 # itens_iguais = []
 #
-# while i < len(words):
-#     a = words[i]
+# while i < len(palavras):
+#     a = palavras[i]
 #     if len(a) >= 2 and a[0] == a[-1]:
 #         itens_iguais.append(a)
 #     else:
@@ -40,15 +43,15 @@
 
 #### ex 09
 
-# words = ['mix', 'xyz', 'apple', 'xanadu', 'aardvark']
+# palavras = ['mix', 'xyz', 'apple', 'xanadu', 'aardvark']
 # i = 0
 # x_list = []
 # all_list = []
-# while i < len(words):
-#     if words[i][0] == 'x':
-#         x_list.append(words[i])
+# while i < len(palavras):
+#     if palavras[i][0] == 'x':
+#         x_list.append(palavras[i])
 #     else:
-#         all_list.append(words[i])
+#         all_list.append(palavras[i])
 #     i += 1
 #
 # final_list = (sorted(x_list)+sorted(all_list))
@@ -136,3 +139,26 @@
 ##################################################################
 
 #### ex 14
+
+from collections import defaultdict
+import random
+
+f = open("cronicanova.txt", "r")
+texto = f.read().lower()
+f.close()
+palavras = ['']
+palavras.extend(texto.split())
+palavras.extend([''])
+d = defaultdict(list)
+for k, v in zip(palavras, palavras[1:]):
+    d[k].append(v)
+
+# print(d)
+
+novo_texto = []
+palavra = "eu"
+for i in range(15):
+    palavra = random.choice(d[palavra])
+    novo_texto.append(palavra)
+
+print(novo_texto)
