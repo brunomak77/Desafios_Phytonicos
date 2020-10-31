@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 """
 13. wordcount
 
@@ -52,10 +55,47 @@ e conferindo cada etapa do seu progresso.
 """
 
 import sys
-
-
 # +++ SUA SOLUÇÃO +++
 # Defina as funções print_words(filename) e print_top(filename).
+
+
+def mecanismo(texto):
+    lista = texto.read().lower()
+    a = []
+    b = []
+    c = []
+    for i in lista:
+        if i == 'a':
+            a.append(i)
+        elif i == 'b':
+            b.append(i)
+        elif i == 'c':
+            c.append(i)
+    tudo = {'a': len(a), 'b': len(b), 'c': len(c)}
+
+    return tudo
+
+
+def print_words(filename):
+    texto = open(filename, "r")
+    tudo = mecanismo(texto)
+    texto.close()
+
+    for key in sorted(tudo.keys()):
+        lista = key + ' ' + str(tudo[key])
+        print(lista)
+
+
+def print_top(filename):
+    texto = open(filename, "r")
+    tudo = mecanismo(texto)
+    texto.close()
+
+    lista = sorted(tudo.items(), reverse=True, key=lambda x: x[1])
+    for elem in lista:
+        lista = elem[0] + ' ' +str(elem[1])
+        print(lista)
+        if elem == 19: break
 
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
