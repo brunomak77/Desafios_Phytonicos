@@ -92,11 +92,47 @@
 
 #### ex 12
 
+# from heapq import merge
+#
+# list1 = [1,2,3,4,5]
+# list2 = [4,5,6,7,8]
+#
+# print(list(merge(list1, list2)))
 
-from heapq import merge
+##################################################################
 
-list1 = [1,2,3,4,5]
-list2 = [4,5,6,7,8]
+#### ex 13
 
-print(list(merge(list1, list2)))
 
+# def mecanismo(texto):
+#     lista = texto.read().lower()
+#     a = []
+#     b = []
+#     c = []
+#     for i in lista:
+#         if i == 'a':
+#             a.append(i)
+#         elif i == 'b':
+#             b.append(i)
+#         elif i == 'c':
+#             c.append(i)
+#     tudo = {'a': len(a), 'b': len(b), 'c': len(c)}
+#
+#     return tudo
+#
+# texto = open("letras.txt", "r")
+# tudo = mecanismo(texto)
+#
+#
+# for key in sorted(tudo.keys()):
+#     print(key , " " , tudo[key])
+# #
+# # print(tudo)
+#
+# listofTuples = sorted(tudo.items() ,  key=lambda x: x[1])
+# for elem in listofTuples :
+#     print(elem[0] , " " , elem[1] )
+
+##################################################################
+
+#### ex 14
